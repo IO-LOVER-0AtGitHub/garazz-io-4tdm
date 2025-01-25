@@ -1,0 +1,220 @@
+# 4tdm setups:
+### №1
+
+  "MODE": "tdm",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "bas1", "roid", "norm", "roid", "bas2" ],
+    [ "roid", "norm", "norm", "norm", "roid" ],
+    [ "norm", "norm", "nest", "norm", "norm" ],
+    [ "roid", "norm", "norm", "norm", "roid" ],
+    [ "bas4", "roid", "norm", "roid", "bas3" ]
+  ],
+  "X_GRID": 5,
+  "Y_GRID": 5,
+
+### №2
+
+  "MODE": "tdm",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "norm", "norm", "bas1", "norm", "norm" ],
+    [ "norm", "roid", "norm", "roid", "norm" ],
+    [ "bas3", "norm", "nest", "norm", "bas4" ],
+    [ "norm", "roid", "norm", "roid", "norm" ],
+    [ "norm", "norm", "bas2", "norm", "norm" ]
+  ],
+  "X_GRID": 5,
+  "Y_GRID": 5,
+
+### №3
+
+  "MODE": "tdm",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "bas1", "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "bas2", "bas2" ],
+    [ "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2" ],
+    [ "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "nest", "nest", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "nest", "nest", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
+    [ "bas4", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas3" ],
+    [ "bas4", "bas4", "norm", "norm", "norm", "norm", "norm", "norm", "bas3", "bas3" ]
+  ],
+  "X_GRID": 10,
+  "Y_GRID": 10,
+  
+# 3tdm setups:
+### №1 open
+
+  "MODE": "3",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "norm", "norm", "norm", "norm", "norm","norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm","norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "rock", "rock", "norm","norm", "rock", "rock", "norm", "norm" ],
+    [ "norm", "norm", "rock", "roid", "rock","rock", "roid", "rock", "norm", "norm" ],
+    [ "norm", "norm", "norm", "rock", "nest","nest", "rock", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "rock", "nest","nest", "rock", "norm", "norm", "norm" ],
+    [ "norm", "norm", "rock", "roid", "rock","rock", "roid", "rock", "norm", "norm" ],
+    [ "norm", "norm", "rock", "rock", "norm","norm", "rock", "rock", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm","norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm","norm", "norm", "norm", "norm", "norm" ]
+  ],
+  "X_GRID": 10,
+  "Y_GRID": 10,
+  
+# 2tdm setups:
+### №1
+
+  "MODE": "2",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2" ],
+    [ "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2" ],
+    [ "bas1", "norm", "rock", "rock", "norm", "norm", "rock", "rock", "norm", "bas2" ],
+    [ "bas1", "norm", "rock", "roid", "rock", "rock", "roid", "rock", "norm", "bas2" ],
+    [ "bas1", "norm", "norm", "rock", "nest", "nest", "rock", "norm", "norm", "bas2" ],
+    [ "bas1", "norm", "norm", "rock", "nest", "nest", "rock", "norm", "norm", "bas2" ],
+    [ "bas1", "norm", "rock", "roid", "rock", "rock", "roid", "rock", "norm", "bas2" ],
+    [ "bas1", "norm", "rock", "rock", "norm", "norm", "rock", "rock", "norm", "bas2" ],
+    [ "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2" ],
+    [ "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2" ]
+  ],
+  "X_GRID": 10,
+  "Y_GRID": 10,
+  
+### №2 open
+
+  "MODE": "2",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "norm", "norm", "norm", "norm", "norm","norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm","norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "rock", "rock", "norm","norm", "rock", "rock", "norm", "norm" ],
+    [ "norm", "norm", "rock", "roid", "rock","rock", "roid", "rock", "norm", "norm" ],
+    [ "norm", "norm", "norm", "rock", "nest","nest", "rock", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "rock", "nest","nest", "rock", "norm", "norm", "norm" ],
+    [ "norm", "norm", "rock", "roid", "rock","rock", "roid", "rock", "norm", "norm" ],
+    [ "norm", "norm", "rock", "rock", "norm","norm", "rock", "rock", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm","norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm","norm", "norm", "norm", "norm", "norm" ]
+  ],
+  "X_GRID": 10,
+  "Y_GRID": 10,
+  
+# ffa setups:
+### №1
+
+  "MODE": "ffa",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "roid", "roid", "rock", "roid", "roid" ],
+    [ "roid", "rock", "norm", "rock", "roid" ],
+    [ "rock", "norm", "nest", "norm", "rock" ],
+    [ "roid", "rock", "norm", "rock", "roid" ],
+    [ "roid", "roid", "rock", "roid", "roid" ]
+  ],
+  "X_GRID": 5,
+  "Y_GRID": 5,
+
+### №2
+
+  "MODE": "ffa",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "nest", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm" ]
+  ],
+  "X_GRID": 5,
+  "Y_GRID": 5,
+
+### №3
+
+  "MODE": "ffa",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "rock", "norm", "norm", "norm", "rock" ],
+    [ "norm", "roid", "rock", "roid", "norm" ],
+    [ "norm", "rock", "nest", "rock", "norm" ],
+    [ "norm", "roid", "rock", "roid", "norm" ],
+    [ "rock", "norm", "norm", "norm", "rock" ]
+  ],
+  "X_GRID": 5,
+  "Y_GRID": 5,
+
+# boss rush setups:
+### №1
+
+  "MODE": "1",
+  "RANDOM_COLORS": false,
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "ROOM_SETUP": [
+    [ "rock", "nest", "nest", "norm", "norm", "nest", "nest", "rock" ],
+    [ "nest", "nest", "nest", "norm", "norm", "nest", "nest", "nest" ],
+    [ "nest", "nest", "nest", "norm", "norm", "nest", "nest", "nest" ],
+    [ "norm", "norm", "norm", "bas1", "bas1", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "bas1", "bas1", "norm", "norm", "norm" ],
+    [ "nest", "nest", "nest", "norm", "norm", "nest", "nest", "nest" ],
+    [ "nest", "nest", "nest", "norm", "norm", "nest", "nest", "nest" ],
+    [ "rock", "nest", "nest", "norm", "norm", "nest", "nest", "rock" ]
+  ],
+  "X_GRID": 8,
+  "Y_GRID": 8,
+
+below default values nada otherwise it will break something and that’s it
+
+  "DAMAGE_CONSTANT": 0.6,
+  "KNOCKBACK_CONSTANT": 1,
+  "ROOM_BOUND_FORCE": 0.01,
+  "FOOD": [
+    0, 
+    0.75,
+    0.22,
+    0.1,
+    0.005,
+    0,
+    0
+  ],
+  "FOOD_NEST": [
+    0, 
+    0.0,
+    0.0,
+    0.75,
+    0.23,
+    0.02,
+    0
+  ],
+  "MAX_SKILL": 9,
+  "SOFT_MAX_SKILL": 0.59,
+  "TIER_1": 0,
+  "TIER_2": 0,
+  "TIER_3": 0,
+  "TIER_4": 0,
+  "TIER_5": 0,
+  "TIER_6": 0,
+  "SKILL_CAP": 90,
+  "SKILL_SOFT_CAP": 0,
+  "SKILL_CHEAT_CAP": 45,
+  "SKILL_LEAK": 0,
+  "STEALTH": 4,
+  "MIN_SPEED": 0.001,
+  "FOOD_AMOUNT": 0.4, 
+  "SKILL_BOOST": 5,
+  "BOTS": 0,
+  "GLASS_HEALTH_FACTOR": 2
+}

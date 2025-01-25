@@ -1,0 +1,159 @@
+blank
+
+trap guard
+
+                    POSITION: [  13,    8.5,     1,      0,      0,     180,     0,   ],
+                        }, {
+                    POSITION: [   4,    8.5,    1.7,    13,      0,     180,     0,   ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.trap]),
+                            TYPE: exports.trap, STAT_CALCULATOR: gunCalcNames.trap,
+
+over
+
+                    POSITION: [   6,     11,    1.2,     8,      0,     125,     0,   ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.drone, g.over, g.meta]),
+                            TYPE: exports.drone,
+                            AUTOFIRE: true,
+                            SYNCS_SKILLS: true,
+                            STAT_CALCULATOR: gunCalcNames.drone,
+                            WAIT_TO_CYCLE: true,  
+                            MAX_CHILDREN: 3,
+                        }, }, {
+                    POSITION: [   6,     11,    1.2,     8,      0,     235,     0,   ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.drone, g.over, g.meta]),
+                            TYPE: exports.drone,
+                            AUTOFIRE: true,
+                            SYNCS_SKILLS: true,
+                            STAT_CALCULATOR: gunCalcNames.drone,
+                            WAIT_TO_CYCLE: true,     
+                            MAX_CHILDREN: 3,
+
+tri
+
+                    POSITION: [  16,     8,      1,      0,      0,     150,    0.1,  ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.thruster, g.halfrecoil]),
+                            TYPE: exports.bullet,
+                            LABEL: gunCalcNames.thruster,
+                        }, }, {   
+                    POSITION: [  16,     8,      1,      0,      0,     210,    0.1,  ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.thruster, g.halfrecoil]),
+                            TYPE: exports.bullet,
+                            LABEL: gunCalcNames.thruster,
+                        }, }, {   
+                    POSITION: [  18,     8,      1,      0,      0,     180,    0.6,  ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.thruster, g.halfrecoil]),
+                            TYPE: exports.bullet,
+                            LABEL: gunCalcNames.thruster,
+                            
+swarm side
+
+                    POSITION: [   7,    7.5,    0.6,     7,     -1,      90,     0,   ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.swarm]),
+                            TYPE: [exports.autoswarm],
+                            STAT_CALCULATOR: gunCalcNames.swarm,
+                        }, }, {   
+                    POSITION: [   7,    7.5,    0.6,     7,      1,     -90,     0,   ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.swarm]),
+                            TYPE: [exports.autoswarm],
+                            STAT_CALCULATOR: gunCalcNames.swarm,
+
+fighter side
+
+                    POSITION: [  16,     8,      1,      0,     -1,      90,     0,   ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.trifront]),
+                            TYPE: exports.bullet,
+                            LABEL: 'Side',
+                        }, }, {   
+                    POSITION: [  16,     8,      1,      0,      1,     -90,     0,   ], 
+                        PROPERTIES: {
+                            SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.trifront]),
+                            TYPE: exports.bullet,
+                            LABEL: 'Side',
+
+mech part
+
+POSITION: [  12,    11,      1,      0,      0,      0,      0,   ],
+
+pen part
+
+                POSITION: [      21,     8,      1,      0,      0,      0,      0, ], 
+                    PROPERTIES: {
+                        SHOOT_SETTINGS: combineStats([g.basic]),
+                        TYPE: exports.bullet,
+
+
+nicknames for bots (weapons):
+
+        'M4A1',
+        'M4A1-S',
+        'M4',
+        'AK-47',
+        'AK-74',
+        'SSG-08',
+        'AWP',
+        'VSS Vintorez',
+        'FN Five-Seven',
+        'Desert Eagle',
+        'M249',
+        'Model 1887',
+        'MAC-10',
+        'Kriss Vector',
+        'FN P90',
+        'PP Bizon-19',
+        'Scar',
+        'Scar-S',
+        'USP-S',
+        'Tommy Gun',
+        'BFG-50',
+        'Double Barrel',
+        'Sawed Off',
+        'AN-94',
+        'AUG-A1',
+        'M1 Garand',
+        'UMP45',
+        'Winchester-1873',
+        'R8',
+        'Glock-17',
+        'Glock-18',
+        'M1911',
+        'Tec-9',
+        'Kar98k',
+        'M82',
+        'AA-12',
+        'SPAS-12',
+        'UTS-15',
+        'PSG1',
+        'G3',
+        'G36C',
+        'STEN',
+        'MP5',
+        'MP5SD',
+        'MP40',
+        'FN FAL',
+        'Chargeberg-500',
+        'Mossberg-500',
+        'XM1014',
+        'RPG-7',
+        'Peacemaker',
+        'Famas F1',
+        'Famas G2',
+        'Thompson M1A1',
+        'Galil',
+        'Makarov Pistol',
+        'P228',
+        'Scout',
+        'M16',
+        'SAR 21',
+        'G11',
+        'Sks Russian Tula',
+        'UZI',
+        'M110'//*/
