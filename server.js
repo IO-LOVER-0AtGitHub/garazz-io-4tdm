@@ -5675,7 +5675,9 @@ var maintainloop = (() => {
         util.log("[SPAWN] Preparing to spawn...");
         timer = 0;
         let choice = [];
-        switch (ran.chooseChance(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)) {
+        switch (
+          ran.chooseChance(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+        ) {
           case 0:
             choice = [[Class.elite_destroyer], 2, "a", "nest"];
             sockets.broadcast("A group of destroyers are coming...");
@@ -5726,19 +5728,19 @@ var maintainloop = (() => {
             break;
           case 11:
             choice = [[Class.summontrap], 3, "castle", "norm"];
-            sockets.broadcast(
-              "The Square-Protecting Giga-Trappers are coming..."
-            );
+            sockets.broadcast("The Square-Protecting Trappers are coming...");
             break;
-            case 12:
+          case 12:
             choice = [[Class.satellitedtank], 4, "a", "norm"];
-            sockets.broadcast(
-              "The Satellited Tanks are coming..."
-            );
+            sockets.broadcast("The Satellited Tanks are coming...");
             break;
-            case 13:
+          case 13:
             choice = [[Class.warship], 3, "castle", "norm"];
             sockets.broadcast("The Warships are coming...");
+            break;
+          case 14:
+            choice = [[Class.elite_boomer], 1, "castle", "nest"];
+            sockets.broadcast("The Cutter of tanks is coming...");
             break;
         }
         boss.prepareToSpawn(...choice);
@@ -5922,11 +5924,13 @@ var maintainloop = (() => {
               Class.gatling,
               Class.chaingun,
               Class.machineflank,
-              Class.machinetriple,              
+              Class.machinetriple,
             ])
           );
           let name = ran.choose([1, 2, 3, 4]);
-          if (name = 1 || 2 || 3) {o.name += ran.chooseBotName()};
+          if ((name = 1 || 2 || 3)) {
+            o.name += ran.chooseBotName();
+          }
           o.refreshBodyAttributes();
           let team = ran.choose([1, 2, 3, 4]);
           o.team = -team;
@@ -5945,7 +5949,7 @@ var maintainloop = (() => {
               Class.nemesis,
               Class.megasmash,
               Class.autosmash,
-              Class.lancer, 
+              Class.lancer,
               Class.chasseur,
               Class.waraxe,
               Class.megawaraxe,

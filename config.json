@@ -11,8 +11,8 @@
   "runSpeed": 1.5,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 5500,
-  "HEIGHT": 5500,
+  "WIDTH": 6000,
+  "HEIGHT": 6000,
   "MODE": "tdm",
   "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
@@ -62,6 +62,6 @@
   "FOOD_AMOUNT": 0.5, 
   "SKILL_BOOST": 5,
   "SMSH_BOTS": 4,
-  "BOTS": 12,
+  "BOTS": 11,
   "GLASS_HEALTH_FACTOR": 2
 }
