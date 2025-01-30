@@ -5676,7 +5676,7 @@ var maintainloop = (() => {
         timer = 0;
         let choice = [];
         switch (
-          ran.chooseChance(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+          ran.chooseChance(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
         ) {
           case 0:
             choice = [[Class.elite_destroyer], 2, "a", "nest"];
@@ -5739,8 +5739,14 @@ var maintainloop = (() => {
             sockets.broadcast("The Warships are coming...");
             break;
           case 14:
-            choice = [[Class.elite_boomer], 1, "castle", "nest"];
+            choice = [[Class.elite_boomer], 1, "a", "nest"];
             sockets.broadcast("The Cutter of tanks is coming...");
+            break;
+          case 15:
+            choice = [[Class.peacekeeper], 1, "castle", "nest"];
+            sockets.broadcast(
+              "The Keeper of Peace is coming... The Justice will punish the Bad Guys..."
+            );
             break;
         }
         boss.prepareToSpawn(...choice);
