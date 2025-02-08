@@ -884,6 +884,27 @@ class io_fastspin extends IO {
     };
   }
 }
+class io_superfastspin extends IO {
+  constructor(b) {
+    super(b);
+    this.a = 0;
+  }
+
+  think(input) {
+    this.a += 0.175;
+    let offset = 0;
+    if (this.body.bond != null) {
+      offset = this.body.bound.angle;
+    }
+    return {
+      target: {
+        x: Math.cos(this.a + offset),
+        y: Math.sin(this.a + offset),
+      },
+      main: true,
+    };
+  }
+}
 class io_reversespin extends IO {
   constructor(b) {
     super(b);
