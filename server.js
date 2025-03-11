@@ -2812,7 +2812,8 @@ class Entity {
           // If it's not food, give its master the score
           if (
             instance.master.type === "tank" ||
-            instance.master.type === "miniboss"
+            instance.master.type === "miniboss" ||
+            instance.master.type === "heltanks"
           )
             notJustFood = true;
           instance.master.skill.score += jackpot;
@@ -2831,7 +2832,7 @@ class Entity {
         dothISendAText = this.settings.givesKillMessage;
       killers.forEach((instance) => {
         this.killCount.killers.push(instance.index);
-        if (this.type === "tank") {
+        if (this.type === "tank" || this.type === "heltanks") {
           if (killers.length > 1) instance.killCount.assists++;
           else instance.killCount.solo++;
         } else if (this.type === "miniboss") instance.killCount.bosses++;
@@ -4716,6 +4717,8 @@ const sockets = (() => {
               return 12;
             case -4:
               return 15;
+            case -69:
+              return 19;
             default:
               if (
                 room.gameMode[0] === "2" ||
@@ -4800,7 +4803,8 @@ const sockets = (() => {
             if (
               (my.type === "wall" && my.alpha > 0.2) ||
               my.type === "miniboss" ||
-              (my.type === "tank" && my.lifetime)
+              (my.type === "tank" && my.lifetime) || 
+              my.type === "heltanks"
             )
               all.push({
                 id: my.id,
@@ -5835,6 +5839,7 @@ var maintainloop = (() => {
     // Return the spawning function
     let bots = [];
     let smshbots = [];
+    let heltanks = [];
     return () => {
       let census = {
         crasher: 0,
@@ -5857,101 +5862,41 @@ var maintainloop = (() => {
       // Define the Bots Spawning Great Function
       function makeNormalBots() {
         if (bots.length < c.BOTS) {
-          let o = new Entity(room.random());
+          let o = new Entity(room.randomType("nest"));
           o.define(Class.bot);
           o.define(
             ran.choose([
-              Class.basic,
-              Class.twin,
-              Class.triple,
-              Class.bent,
+              //featured tier 4 tanks
+              //twins first
+              Class.tripual,
               Class.tripletwin,
-              Class.guntrap,
-              Class.overgunner,
-              Class.overseer,
-              Class.autoover,
-              Class.overlord,
-              Class.underseer,
-              Class.necromancer,
-              Class.hiveshooter,
-              Class.machine,
-              Class.tri,
-              Class.booster,
-              Class.brutalizer,
-              Class.fighter,
-              Class.auto3,
-              Class.heavy3,
-              Class.auto4,
-              Class.gunner,
-              Class.hybridmini,
-              Class.mini,
-              Class.minitrap,
-              Class.stream,
-              Class.auto5,
-              Class.director,
-              Class.cruiser,
-              Class.carrier,
-              Class.single,
-              Class.flank,
-              Class.octo,
-              Class.hexa,
-              Class.double,
-              Class.autodouble,
-              Class.bentdouble,
+              Class.machinegunner,
+              Class.penta,
               Class.spread,
-              Class.split,
-              Class.anni,
-              Class.destroy,
-              Class.conq,
-              Class.autospawner,
-              Class.hexatrap,
+              Class.octo,
+              Class.cyclone,
+              Class.quint,
+              Class.battery,
+              //then snipers
+              Class.ranger,
+              Class.chaingun,
               Class.preda,
               Class.poach,
-              Class.hunter,
-              Class.sniper,
-              Class.pound,
-              Class.bushwhack,
-              Class.flanktrap,
-              Class.builder,
-              Class.tritrap,
-              Class.construct,
-              Class.fortress,
-              Class.shotgun2,
-              Class.hybrid,
-              Class.mortar,
-              Class.artillery,
-              Class.autotri,
-              Class.bomber,
-              Class.nailgun,
-              Class.master,
-              Class.banshee,
-              Class.spray,
-              Class.autobuilder,
-              Class.engineer,
-              Class.dual,
-              Class.assassin,
-              Class.ranger,
-              Class.boomer,
-              Class.autogunner,
-              Class.machinegunner,
-              Class.launcher,
-              Class.field,
-              Class.twister,
-              Class.skimmer,
               Class.sidewind,
-              Class.autobeebrid,
-              Class.beeshooter,
-              Class.tripual,
-              Class.quadtrapper,
-              Class.hardshelltank,
-              Class.megashelltank,
-              Class.spikyshelltank,
-              Class.battery,
+              //after that the machine guns
+              Class.nailgun,
+              Class.hybridmini,
+              Class.stream,
+              Class.xspray,
               Class.halfnhalf,
-              Class.gatling,
-              Class.chaingun,
-              Class.machineflank,
-              Class.machinetriple,
+              //flankers
+              Class.octo,
+              //daily tanks
+              Class.dailytanks,
+              Class.literallybasic,
+              Class.amalgam,
+              Class.minieggking,
+              
             ])
           );
           let name = ran.choose([1, 2, 3, 4]);
@@ -5976,6 +5921,7 @@ var maintainloop = (() => {
               Class.nemesis,
               Class.megasmash,
               Class.autosmash,
+              Class.weirdspike,
               Class.lancer,
               Class.chasseur,
               Class.waraxe,
@@ -5992,11 +5938,34 @@ var maintainloop = (() => {
           smshbots.push(s);
         }
       }
+      function makeHelTanks() {
+        if (heltanks.length < c.HELTANKS) {
+          let hel = new Entity(room.random());
+          hel.define(Class.heltanks);
+          hel.define(
+            ran.choose([
+              Class.helxspray,
+              Class.helmaster,
+              Class.helbattleship,
+              Class.helradiator,
+              Class.helamalgam,
+            ])
+          );
+          hel.name += ran.chooseHelNames();
+          hel.refreshBodyAttributes();
+          let team = 69;
+          hel.team = -team;
+          hel.color = 19;
+          heltanks.push(hel);
+        }
+      }
       // Spawn'em
       // Normal Bots
       makeNormalBots();
       // Smasher Bots
       makeSmasherBots();
+      //Hel Tanks
+      makeHelTanks();
       /*normal*/
       // Remove dead ones
       bots = bots.filter((e) => {
@@ -6014,14 +5983,13 @@ var maintainloop = (() => {
       smshbots = smshbots.filter((e) => {
         return !e.isDead();
       });
-      // Fastly upgrade them
-      bots.forEach((s) => {
-        if (s.skill.level < 45) {
-          s.skill.score += 300;
-          s.skill.maintain();
-        }
+      //level up already done
+      /*hel tanks*/
+      // Remove dead ones
+      heltanks = heltanks.filter((e) => {
+        return !e.isDead();
       });
-      //*/
+      //level up already done
     };
   })();
   // The big food function
